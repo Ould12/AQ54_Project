@@ -12,7 +12,7 @@
 
 ## Introduction 
 
-**AQ54** est un projet de surveillance de la qualité de l'air visant à collecter et analyser des données en temps réel à Abidjan. Ce projet utilise des capteurs Airgino pour mesurer divers polluants atmosphériques, tels que le CO, NO2, PM10, et PM2.5, et fournit des visualisations accessibles via une application web.
+**AQ54** est un projet de surveillance de la qualité de l'air visant à collecter et analyser des données en temps réel à Abidjan. Ce projet utilise des capteurs Airqino pour mesurer divers polluants atmosphériques, tels que le CO, NO2, PM10, et PM2.5, et fournit des visualisations accessibles via une application web.
 
 ## Purpose of the Project
 

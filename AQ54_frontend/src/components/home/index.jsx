@@ -30,7 +30,7 @@ const Home = () => {
                     </p>
                     {/* Bouton Get Started */}
                     <div className="flex justify-center">
-                        <NavLink to="/airqualityform">
+                        <NavLink to="/dashboard">
                             <button
                                 className="ml-4 inline-flex text-green-800 border-4 border-green-500 bg-white py-4 px-8 focus:outline-none hover:scale-105 hover:border-green-800 hover:text-green-700 text-center rounded-lg text-xl tracking-wide transition duration-300"
                                 aria-label="Commencer"

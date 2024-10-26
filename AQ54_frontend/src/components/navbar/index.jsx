@@ -62,7 +62,7 @@ const Navbar = () => {
                     <Tippy content='Lien vers GitHub'>
                         <a
                             className="mr-5 text-green-800 hover:text-green-700 cursor-pointer transition duration-100"
-                            href="https://github.com/"
+                            href="https://github.com/Ould12/AQ54_Project.git"
                             target="_blank"
                             rel="noopener noreferrer"
                         >

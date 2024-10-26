@@ -77,3 +77,10 @@ Accédez au frontend via : http://localhost:3000
 L’API backend est disponible sur : http://localhost:5000/api/
 
 
+## Aperçu du Dashboard
+
+Voici un aperçu du dashboard de l’application :
+
+![Dashboard aperçu 1](./assets/Dashboard1.png)
+
+![Dashboard aperçu 2](./assets/Dashboard2.png)

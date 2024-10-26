@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  # Base de données PostgreSQL
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: aq54_db
+    ports:
+      - "5432:5432" # Remapping pour que PostgreSQL écoute sur 5432 de la machine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./AQ54_backend/init-scripts:/docker-entrypoint-initdb.d
+    command: ["postgres", "-c", "max_prepared_transactions=100"]
+    networks:
+      - aq54-network
+
+  # Backend NestJS
+  backend:
+    build:
+      context: ./AQ54_backend
+    container_name: nest-backend
+    ports:
+      - "5000:5000" # Port exposé pour le backend
+    environment:
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=postgres
+      - DATABASE_NAME=aq54_db
+    depends_on:
+      - postgres # Le backend attend que PostgreSQL soit démarré
+    networks:
+      - aq54-network
+
+  # Frontend React
+  frontend:
+    build:
+      context: ./AQ54_frontend
+    container_name: react-frontend
+    ports:
+      - "3000:80" # Exposer le frontend sur le port 3000 de la machine
+    depends_on:
+      - backend # Le frontend attend que le backend soit démarré
+    networks:
+      - aq54-network
+
+networks:
+  aq54-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

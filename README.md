@@ -48,15 +48,13 @@ Assurez-vous d'avoir **Docker** et **Docker Compose** installés pour une exécu
 
 1. **Clonez le projet :**
    ```bash
-   git clone https://github.com/username/AQ54-Air-Quality-Monitoring.git
-   cd AQ54-Air-Quality-Monitoring
+   git clone https://github.com/Ould12/AQ54_Project.git 
+   cd AQ54_Project
 
 2. **Créez un fichier .env à la racine du projet et ajoutez les configurations suivantes :**
 
     ```
-    env
-    Copier le code
-    POSTGRES_USER=postgres
+    POSTGRES_USER=localhost
     POSTGRES_PASSWORD=postgres
     POSTGRES_DB=aq54_db
     POSTGRES_HOST=postgres
